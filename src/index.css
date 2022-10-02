@@ -1,5 +1,9 @@
 body {
-  margin: 0;
+  background-color: teal;
+  margin: 100px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +14,86 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.wrapper {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 1px;
+  gap: 30px;
+}
+
+.xMarkIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+.showField {
+  width: 200px;
+  height: 300px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+.showField > button {
+  cursor: pointer;
+  border: none;
+  font-size: 24px;
+  background-color: lightblue;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  position: relative;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+.image {
+  width: 90%;
+  height: 90%;
+}
+
+
+.reportField {
+  width: 500px;
+  min-height: 50px;
+  font-size: 24px;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  background-color: lightblue;
+}
+
+
+.reportButton {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: aliceblue;
+}
+
+.unmountedItem {
+  display: flex;
+  justify-content: center;
 }
