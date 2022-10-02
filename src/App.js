@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import {Component} from "react";
+import Counter from "./components/counter";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+constructor() {
+  super();
+  this.state = {
+    minValue: 0,
+    maxValue: Infinity,
+  }
 }
+
+handleMinValueInputChange = (event) => {
+this.setState({
+  minValue: event.target.value,
+})
+}
+
+handleMaxValueInputChange = (event) => {
+  this.setState({
+    maxValue: event.target.value,
+  })
+  }
+
+render() {
+  const {state: {minValue,maxValue}} = this;
+  return ( 
+  <div className="wrapper">
+    <div className="inputs">
+    <input className="minValueInput" onChange={this.handleMinValueInputChange} type="number" placeholder="Enter the minimum value"/>
+    <input className="maxValueInput" onChange={this.handleMaxValueInputChange} type="number" placeholder="Enter the maximum value"/>
+   </div>
+   <Counter minValue={minValue} maxValue={maxValue} />
+  </div>
+   
+  )
+}
+}
+
+
 
 export default App;
