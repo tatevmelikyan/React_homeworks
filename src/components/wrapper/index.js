@@ -34,7 +34,6 @@ class Wrapper extends Component {
  
   render () {
     const {state: {cardId,isRemoved,unmounted,reportClicked}, handleRemove,handleReport} = this;
-    console.log(unmounted);
     return (<>
     <div className='wrapper'>
     { data.map(card => {
