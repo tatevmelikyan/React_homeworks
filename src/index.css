@@ -15,22 +15,20 @@ code {
 
 
 .input > input {
-  width: 500px;
-  height: 30px;
+  width: 40vw;
+  height: 4vh;
   font-size: 16px;
   
 }
 
 .header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom:  10vh;
 }
 
-h1 {
-  padding: 20px;
-  padding: 20px;
-}
 
 .container {
   display: flex;

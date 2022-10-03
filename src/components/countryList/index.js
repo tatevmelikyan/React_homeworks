@@ -33,8 +33,8 @@ componentDidUpdate(prevProps,prevState) {
             if(searchInput.length >= 3) {
                 this.setState( { 
                     countries: this.countryList.filter(({name: {common}, capital}) => {
-                       return common.toLowerCase().includes(searchInput.toLowerCase()) 
-                       || String(capital).toLowerCase().includes(searchInput.toLowerCase())
+                       return common.toLowerCase().includes(searchInput.toLowerCase().replace(/\s+/g, ' ').trim()) 
+                       || String(capital).toLowerCase().includes(searchInput.toLowerCase().replace(/\s+/g, ' ').trim())
                     }) } )
             }  else {
                 this.setState({countries: this.countryList})
