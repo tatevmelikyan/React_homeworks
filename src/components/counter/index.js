@@ -12,18 +12,20 @@ constructor() {
 
 
 handleIncrease = () => {
-    if(this.props.maxValue > this.state.count) {
+  const {state: {count},props: {maxValue,step}} = this;
+    if(maxValue > count + step) {
         this.setState({
-            count: this.state.count + 1,
+            count: count + step,
         })
     }
 }
 
 
 handleDecrease = () => {
-    if(this.props.minValue < this.state.count) {
+  const {state: {count},props: {minValue,step}} = this;
+    if(minValue < count - step) {
         this.setState({
-            count: this.state.count - 1,
+            count: count - step,
         })
     }
 }
